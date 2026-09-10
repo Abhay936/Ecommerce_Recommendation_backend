@@ -11,8 +11,9 @@ build_recommendation_model() ran inside every request handler.
 import sys
 from pathlib import Path
 
-# Add the repository root directory to Python's module search path
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+# Add current directory, parent directory, and grandparent directory to sys.path
+FILE_DIR = Path(__file__).resolve().parent
+sys.path.extend([str(FILE_DIR), str(FILE_DIR.parent), str(FILE_DIR.parent.parent)])
 import logging
 from contextlib import asynccontextmanager
 
