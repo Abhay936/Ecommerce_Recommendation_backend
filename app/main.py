@@ -8,6 +8,11 @@ loaded ONCE at startup via the lifespan handler below and attached to
 `app.state.recommender`. This replaces the original design where
 build_recommendation_model() ran inside every request handler.
 """
+import sys
+from pathlib import Path
+
+# Add the repository root directory to Python's module search path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 import logging
 from contextlib import asynccontextmanager
 
