@@ -1,0 +1,12 @@
+{
+  "n_products": 60000,
+  "n_categories": 248,
+  "tfidf_vocab_size": 20000,
+  "sample_size_config": 60000,
+  "weights": {
+    "content": 0.65,
+    "popularity": 0.2,
+    "rating": 0.15
+  },
+  "saved_at": "2026-09-06T19:48:58Z"
+}
